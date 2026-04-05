@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glob 1"></div>
+    <div class="background-glob 2"></div>
+
+    <div class="container glass">
+        <header>
+            <h1>AI Movie Recommender</h1>
+            <p>Select movies you like, and our AI will curate your perfect watch list.</p>
+        </header>
+
+        <main>
+            <section class="selection-area">
+                <div class="input-group">
+                    <select id="movie-select" class="glass-input">
+                        <option value="">Select a movie to add to your profile...</option>
+                    </select>
+                    <button id="add-btn" class="glow-on-hover">Add to Profile</button>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Your Movie Profile</h3>
+                    <div id="history-tags" class="tags-container">
+                        <p class="empty-state">No movies added yet. Add some above to get recommendations!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recommendations-area" id="recommendations-container" style="display: none;">
+                <h2>Because you liked those, we recommend:</h2>
+                <div id="movie-cards" class="cards-grid">
+                    <!-- Cards injected by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
